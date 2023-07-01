@@ -24,6 +24,6 @@ int main()
                 }
         }
 
-        printf("the sum of right diagonals of a matrix is %d",sum) ;
+        printf("the sum of left diagonals of a matrix is %d",sum) ;
 
 }
