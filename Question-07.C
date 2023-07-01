@@ -4,20 +4,20 @@
 
 int main ()
 {
-        int m,n,i,j ;
+        int n,i,j ;
 
-        printf("Enter size ( m x n ) : ");
-        scanf("%d%d",&m,&n);
+        printf("Enter size ( n x n ) : ");
+        scanf("%d",&n);
 
-        int a[m][n] ;
+        int a[n][n] ;
 
         printf("Enter values of a[] :\n");
-        for(i=0 ; i<m ; i++)
+        for(i=0 ; i<n ; i++)
                 for(j=0 ; j<n ; j++)
                         scanf("%d",&a[i][j] );
 
 
-        for(i=0 ; i<m ; i++)
+        for(i=0 ; i<n ; i++)
         {
                 for(j=0 ; j<n ; j++)
                 {
@@ -28,7 +28,7 @@ int main ()
 
 
         printf("the lower triangular :\n");
-        for(i=0 ; i<m ; i++)
+        for(i=0 ; i<n ; i++)
         {
                 for(j=0 ; j<n ; j++)
                         printf("%d ",a[i][j]);
