@@ -3,33 +3,33 @@
 #include<stdio.h>
 int main ()
 {
-        int m,n,i,j;
-        printf("Enter (m x n) : ");
-        scanf("%d%d",&m,&n);
+        int n,i,j;
+        printf("Enter size of sqr matrix : ");
+        scanf("%d",&n);
 
-        int a[m][n] ;
+        int a[n][n] ;
 
         printf("Enter values of matrix a[][] :\n");
-        for(i=0 ; i<m ; i++)
+        for(i=0 ; i<n ; i++)
                 for(j=0 ; j<n ; j++)
                         scanf("%d",&a[i][j]);
 
 
-        for(i=0 ; i<m ; i++)
+        for(i=0 ; i<n ; i++)
                 for(j=0 ; j<n ; j++)
                         if( i < j )
                                 a[i][j ]= 0 ;
 
 
         printf("Upper Triangle : \n");
-        for(i=0 ; i<m ; i++)
+        for(i=0 ; i<n ; i++)
         {
                 for(j=0 ; j<n ; j++)
                         printf("%d ",a[i][j]);
 
                 printf("\n");
+
         }
 
-        return 0;
-
+        return 0 ;
 }
