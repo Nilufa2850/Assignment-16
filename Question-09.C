@@ -1,35 +1,54 @@
-// Write a program in C to print or display an upper triangular matrix.
+// Write a program in C to accept a matrix and determine whether it is a sparse matrix.
+
 
 #include<stdio.h>
 int main ()
 {
-        int n,i,j;
-        printf("Enter size of sqr matrix : ");
-        scanf("%d",&n);
+    int m, n, i, j, zero = 0, non_zero = 0 ;
 
-        int a[n][n] ;
+    printf("Enter (m x n) : ");
+    scanf("%d%d",&m,&n);
 
-        printf("Enter values of matrix a[][] :\n");
-        for(i=0 ; i<n ; i++)
-                for(j=0 ; j<n ; j++)
-                        scanf("%d",&a[i][j]);
+    int A[m][n] ;
 
-
-        for(i=0 ; i<n ; i++)
-                for(j=0 ; j<n ; j++)
-                        if( j>i )
-                                a[i][j ]= 0 ;
+    printf("Enter values os matrix A : \n");
+    for(i=0 ; i<m ; i++)
+        for(j=0 ; j<n ; j++)
+            scanf("%d",&A[i][j]);
 
 
-        printf("Upper Triangle : \n");
-        for(i=0 ; i<n ; i++)
+    for(i=0 ; i<m ;i++)
+    {
+        for(j=0 ; j<n ; j++)
         {
-                for(j=0 ; j<n ; j++)
-                        printf("%d ",a[i][j]);
+            if( A[i][j] == 0 )
+                zero ++ ;
 
-                printf("\n");
+            else 
+                non_zero ++ ;
         }
+    }
 
-        return 0;
+
+    if( zero > non_zero )
+        printf("It's a Sparse Matrix - as %d no's of Zero (0) & %d no's of Non zero.",zero , non_zero);
+
+    else 
+        printf("It's NOT Sparse Matrix - as %d no's of Zero (0) & %d no's of Non zero.",zero , non_zero);
+
+
+    return 0;
 
 }
+
+
+
+/* Sparse Matrix : A matrix which contains very few non zero elements.
+
+    EXAMPLE :   0 5 0
+                0 0 1
+                0 0 0  
+
+*/ 
+
+
